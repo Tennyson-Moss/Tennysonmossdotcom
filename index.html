@@ -188,16 +188,26 @@
   }
 
   /* ---- Motion ---- */
-  .video-frame {
-    aspect-ratio: 16 / 9;
-    background: var(--ink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .video-frame .placeholder-label { color: var(--paper); }
-  .video-frame iframe { width: 100%; height: 100%; border: 0; }
   .motion-stack { display: grid; gap: 20px; }
+  .video-hero {
+    width: 100%;
+    max-width: 720px;
+    justify-self: center;
+    display: block;
+    border: 1px solid var(--line);
+    background: var(--ink);
+  }
+  .logo-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .logo-row video {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--line);
+    background: var(--paper-raise);
+  }
 
   /* ---- Interactive ---- */
   .rive-frame {
@@ -341,13 +351,22 @@
       </div>
 
       <div class="motion-stack">
-        <!-- PLACEHOLDER: replace with Vimeo/YouTube embed iframe when reel or best pieces are chosen -->
-        <div class="video-frame"><span class="placeholder-label">REEL OR BEST MOTION PIECE<br>Vimeo / YouTube embed goes here</span></div>
+        <video class="video-hero" autoplay muted loop playsinline preload="metadata" aria-label="Commercial motion graphics spot for Groundwork">
+          <source src="assets/groundwork.mp4" type="video/mp4">
+        </video>
+        <p class="project-caption">
+          <strong>Commercial spot — Groundwork.</strong>
+          LinkedIn ad campaign (2026). Animation and design from client-supplied brand assets, delivered in half the projected timeline.
+        </p>
+        <div class="logo-row">
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Animated logo loop"><source src="assets/chad-logo.mp4" type="video/mp4"></video>
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Animated logo loop"><source src="assets/starbite-logo.mp4" type="video/mp4"></video>
+        </div>
+        <p class="project-caption">
+          <strong>Logo animations.</strong>
+          Selected identity animation loops, designed and animated in After Effects.
+        </p>
       </div>
-      <p class="project-caption">
-        <!-- PLACEHOLDER: one-line caption per video: what it is, what you did -->
-        Caption for the piece above goes here.
-      </p>
     </div>
   </section>
 
