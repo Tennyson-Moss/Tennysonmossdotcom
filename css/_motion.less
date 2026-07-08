@@ -1,0 +1,26 @@
+.motion-stack {
+  display: grid;
+  gap: 20px;
+}
+
+.video-hero {
+  width: 100%;
+  max-width: 720px;
+  justify-self: center;
+  display: block;
+  border: 1px solid @line;
+  background: @ink;
+}
+
+.logo-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  video {
+    width: 100%;
+    display: block;
+    border: 1px solid @line;
+    background: @paper-raise;
+  }
+}

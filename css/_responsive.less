@@ -1,0 +1,11 @@
+@media (max-width: @bp-tablet) {
+  .grid        { grid-template-columns: repeat(2, 1fr); }
+  .about-cols  { grid-template-columns: 1fr; }
+  .nav ul      { gap: 16px; }
+  .scene       { flex-wrap: wrap; }
+  .scene .note { margin-left: 0; width: 100%; }
+}
+
+@media (max-width: @bp-mobile) {
+  .grid { grid-template-columns: 1fr; }
+}

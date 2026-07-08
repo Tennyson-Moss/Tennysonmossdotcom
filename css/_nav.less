@@ -1,0 +1,48 @@
+header {
+  position: sticky;
+  top: 0;
+  background: @paper;
+  border-bottom: 1px solid @line;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: @max-width;
+  margin: 0 auto;
+
+  .mark {
+    font-family: @font-mono;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @ink;
+  }
+
+  ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  a.navlink {
+    font-family: @font-mono;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: @ink;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+
+    &:hover,
+    &:focus-visible {
+      border-bottom-color: @clapper;
+    }
+  }
+}

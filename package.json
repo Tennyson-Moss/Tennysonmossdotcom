@@ -1,0 +1,12 @@
+{
+  "name": "tennysonmossdotcom",
+  "private": true,
+  "scripts": {
+    "build:css": "lessc css/main.less css/main.css",
+    "watch:css": "less-watch-compiler css css main.less"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.5"
+  }
+}

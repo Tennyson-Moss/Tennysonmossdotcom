@@ -1,0 +1,52 @@
+section {
+  padding: 72px 0;
+  border-bottom: 1px solid @line;
+}
+
+.scene {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 40px;
+
+  .tag {
+    font-family: @font-mono;
+    font-size: 13px;
+    font-weight: 700;
+    background: @ink;
+    color: @clapper;
+    padding: 4px 10px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-family: @font-display;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 44px);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+
+  .note {
+    margin-left: auto;
+    font-family: @font-mono;
+    font-size: 13px;
+    color: @grey;
+  }
+}
+
+.project-caption {
+  margin-top: 24px;
+  max-width: 640px;
+  color: @grey;
+  font-size: 15px;
+}
+
+.placeholder-label {
+  font-family: @font-mono;
+  font-size: 13px;
+  color: @grey;
+  text-align: center;
+  padding: 12px;
+}

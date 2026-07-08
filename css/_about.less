@@ -1,0 +1,29 @@
+.about-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+
+  p + p { margin-top: 16px; }
+}
+
+.facts {
+  font-family: @font-mono;
+  font-size: 13px;
+  list-style: none;
+  border-top: 2px solid @ink;
+
+  li {
+    padding: 12px 0;
+    border-bottom: 1px solid @line;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .k {
+    color: @grey;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
