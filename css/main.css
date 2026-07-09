@@ -1,3 +1,21 @@
+:root {
+  --ink: #16161a;
+  --text: #16161a;
+  --paper: #f2f2ee;
+  --paper-raise: #ffffff;
+  --clapper: #ffc700;
+  --grey: #6b6b66;
+  --line: #d8d8d2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e4e4e0;
+    --paper: #18181c;
+    --paper-raise: #252529;
+    --grey: #8a8a84;
+    --line: #2e2e34;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,15 +36,15 @@ html {
   }
 }
 body {
-  background: #f2f2ee;
-  color: #16161a;
+  background: var(--paper);
+  color: var(--text);
   font-family: 'Archivo', sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 a:focus-visible {
-  outline: 2px solid #16161a;
+  outline: 2px solid var(--text);
   outline-offset: 3px;
 }
 .wrap {
@@ -36,13 +54,13 @@ a:focus-visible {
 }
 .stripe {
   height: 14px;
-  background: repeating-linear-gradient(-45deg, #16161a 0 18px, #ffc700 18px 36px);
+  background: repeating-linear-gradient(-45deg, var(--ink) 0 18px, var(--clapper) 18px 36px);
 }
 header {
   position: sticky;
   top: 0;
-  background: #f2f2ee;
-  border-bottom: 1px solid #d8d8d2;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
   z-index: 10;
 }
 .nav {
@@ -60,7 +78,7 @@ header {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #16161a;
+  color: var(--text);
 }
 .nav ul {
   display: flex;
@@ -72,18 +90,18 @@ header {
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #16161a;
+  color: var(--text);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
 }
 .nav a.navlink:hover,
 .nav a.navlink:focus-visible {
-  border-bottom-color: #ffc700;
+  border-bottom-color: var(--clapper);
 }
 .hero {
   padding: 88px 0 72px;
-  border-bottom: 1px solid #d8d8d2;
+  border-bottom: 1px solid var(--line);
 }
 .hero h1 {
   font-family: 'Anton', sans-serif;
@@ -94,7 +112,7 @@ header {
   text-transform: uppercase;
 }
 .hero h1 .hl {
-  background: #ffc700;
+  background: var(--clapper);
   padding: 0 0.08em;
 }
 .hero .role {
@@ -110,13 +128,13 @@ header {
   margin-top: 36px;
   font-family: 'Space Mono', monospace;
   font-size: 13px;
-  color: #6b6b66;
+  color: var(--grey);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 section {
   padding: 72px 0;
-  border-bottom: 1px solid #d8d8d2;
+  border-bottom: 1px solid var(--line);
 }
 .scene {
   display: flex;
@@ -128,8 +146,8 @@ section {
   font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-weight: 700;
-  background: #16161a;
-  color: #ffc700;
+  background: var(--ink);
+  color: var(--clapper);
   padding: 4px 10px;
   letter-spacing: 0.08em;
   white-space: nowrap;
@@ -145,12 +163,12 @@ section {
   margin-left: auto;
   font-family: 'Space Mono', monospace;
   font-size: 13px;
-  color: #6b6b66;
+  color: var(--grey);
 }
 .project-caption {
   margin-top: 24px;
   max-width: 640px;
-  color: #6b6b66;
+  color: var(--grey);
   font-size: 15px;
 }
 .grid {
@@ -161,8 +179,8 @@ section {
 .tile {
   position: relative;
   aspect-ratio: 2 / 3;
-  background: #ffffff;
-  border: 1px solid #d8d8d2;
+  background: var(--paper-raise);
+  border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +193,7 @@ section {
   display: block;
 }
 .tile:hover {
-  border-color: #16161a;
+  border-color: var(--text);
 }
 .motion-stack {
   display: grid;
@@ -199,8 +217,8 @@ section {
   max-width: 720px;
   justify-self: center;
   display: block;
-  border: 1px solid #d8d8d2;
-  background: #16161a;
+  border: 1px solid var(--line);
+  background: var(--ink);
 }
 .about-cols {
   display: grid;
@@ -215,17 +233,17 @@ section {
   font-family: 'Space Mono', monospace;
   font-size: 13px;
   list-style: none;
-  border-top: 2px solid #16161a;
+  border-top: 2px solid var(--text);
 }
 .facts li {
   padding: 12px 0;
-  border-bottom: 1px solid #d8d8d2;
+  border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   gap: 16px;
 }
 .facts .k {
-  color: #6b6b66;
+  color: var(--grey);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -243,19 +261,20 @@ section {
   margin-top: 24px;
   font-family: 'Space Mono', monospace;
   font-size: 18px;
-  color: #16161a;
+  color: var(--text);
   text-decoration: none;
-  border-bottom: 3px solid #ffc700;
+  border-bottom: 3px solid var(--clapper);
   padding-bottom: 2px;
 }
 .contact a.email:hover {
-  background: #ffc700;
+  background: var(--clapper);
+  color: var(--ink);
 }
 footer {
   padding: 28px 0 40px;
   font-family: 'Space Mono', monospace;
   font-size: 12px;
-  color: #6b6b66;
+  color: var(--grey);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

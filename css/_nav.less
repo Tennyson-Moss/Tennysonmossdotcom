@@ -1,8 +1,8 @@
 header {
   position: sticky;
   top: 0;
-  background: @paper;
-  border-bottom: 1px solid @line;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
   z-index: 10;
 }
 
@@ -21,7 +21,7 @@ header {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    color: @ink;
+    color: var(--text);
   }
 
   ul {
@@ -35,14 +35,14 @@ header {
     font-size: 13px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: @ink;
+    color: var(--text);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     padding-bottom: 2px;
 
     &:hover,
     &:focus-visible {
-      border-bottom-color: @clapper;
+      border-bottom-color: var(--clapper);
     }
   }
 }
