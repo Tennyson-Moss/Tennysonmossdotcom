@@ -3,6 +3,21 @@
   gap: 20px;
 }
 
+.embed-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
 .video-hero {
   width: 100%;
   max-width: 720px;
@@ -10,17 +25,4 @@
   display: block;
   border: 1px solid @line;
   background: @ink;
-}
-
-.logo-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-
-  video {
-    width: 100%;
-    display: block;
-    border: 1px solid @line;
-    background: @paper-raise;
-  }
 }
