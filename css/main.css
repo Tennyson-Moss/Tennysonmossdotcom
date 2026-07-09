@@ -112,7 +112,9 @@ header {
   text-transform: uppercase;
 }
 .hero h1 .hl {
+  display: inline-block;
   background: var(--clapper);
+  color: var(--ink);
   padding: 0 0.08em;
 }
 .hero .role {

@@ -11,7 +11,11 @@
     text-transform: uppercase;
 
     .hl {
+      // inline-block clamps the background to the line box; Anton's font
+      // metrics otherwise make an inline background bleed into adjacent lines
+      display: inline-block;
       background: var(--clapper);
+      color: var(--ink); // stay dark-on-yellow in dark mode too
       padding: 0 0.08em;
     }
   }
