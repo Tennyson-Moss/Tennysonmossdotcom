@@ -38,7 +38,7 @@ The compiled `css/main.css` is committed to the repo so Cloudflare Pages can ser
 | `_about.less` | `.about-cols`, `.facts` |
 | `_contact.less` | `.contact` |
 | `_footer.less` | `footer` |
-| `_animations.less` | Scroll-in reveals, hero highlight sweep, scene-tag clap |
+| `_animations.less` | Scroll-in reveals, hero highlight sweep |
 | `_responsive.less` | All `@media` breakpoints (incl. mobile hamburger menu) |
 
 ## Deployment
