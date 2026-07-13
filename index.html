@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffc700'/%3E%3Crect width='64' height='22' fill='%2316161a'/%3E%3Cg fill='%23ffc700'%3E%3Cpath d='M2 22 12 0h10L12 22z'/%3E%3Cpath d='M26 22 36 0h10L36 22z'/%3E%3Cpath d='M50 22 60 0h10L60 22z'/%3E%3C/g%3E%3C/svg%3E">
 <script src="js/main.js" defer></script>
+<script src="https://unpkg.com/@rive-app/canvas@2" defer></script>
+<script src="js/interactive.js" defer></script>
 </head>
 <body>
 
@@ -27,6 +29,7 @@
     <ul>
       <li><a class="navlink" href="#work">Work</a></li>
       <li><a class="navlink" href="#motion">Motion</a></li>
+      <li><a class="navlink" href="#interactive">Interactive</a></li>
       <li><a class="navlink" href="#about">About</a></li>
       <li><a class="navlink" href="#contact">Contact</a></li>
     </ul>
@@ -100,6 +103,30 @@
           Winner, "Most Visually Stunning," It's Only A Movie (2023). <a href="https://youtu.be/G61N4tI9MDQ">Watch on YouTube</a>.
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 03: INTERACTIVE ============ -->
+  <section id="interactive">
+    <div class="wrap">
+      <div class="scene">
+        <span class="tag">SC 03</span>
+        <h2>Interactive</h2>
+        <span class="note">RIVE / REALTIME</span>
+      </div>
+
+      <div class="rive-frame">
+        <canvas id="city-canvas" aria-label="Interactive city skyline animation — use the buttons below to switch cities"></canvas>
+      </div>
+      <div class="city-buttons" role="group" aria-label="Choose a city">
+        <button type="button" data-city="1" aria-pressed="false">Seattle</button>
+        <button type="button" data-city="2" aria-pressed="false">St. Louis</button>
+        <button type="button" data-city="3" aria-pressed="false">Nashville</button>
+      </div>
+      <p class="project-caption">
+        <strong>City lines — interactive piece.</strong>
+        Built in Rive. Pick a city and the skyline redraws in real time.
+      </p>
     </div>
   </section>
 

@@ -238,6 +238,43 @@ section {
   border: 1px solid var(--line);
   background: var(--ink);
 }
+.rive-frame {
+  background: var(--ink);
+  border: 1px solid var(--line);
+}
+.rive-frame canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.city-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+.city-buttons button {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: none;
+  border: 1px solid var(--line);
+  padding: 12px 8px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.city-buttons button:hover,
+.city-buttons button:focus-visible {
+  border-color: var(--clapper);
+}
+.city-buttons button[aria-pressed="true"] {
+  background: var(--clapper);
+  border-color: var(--clapper);
+  color: var(--ink);
+}
 .about-cols {
   display: grid;
   grid-template-columns: 1.4fr 1fr;

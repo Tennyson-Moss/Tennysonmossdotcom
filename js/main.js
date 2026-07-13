@@ -7,7 +7,7 @@
   // doesn't run.
   if (!reduceMotion && 'IntersectionObserver' in window) {
     var targets = document.querySelectorAll(
-      '.scene, .tile, .project-caption, .embed-wrap, .video-hero, .about-cols, .contact .big, .contact .email'
+      '.scene, .tile, .project-caption, .embed-wrap, .video-hero, .rive-frame, .city-buttons, .about-cols, .contact .big, .contact .email'
     );
 
     var io = new IntersectionObserver(function (entries) {
