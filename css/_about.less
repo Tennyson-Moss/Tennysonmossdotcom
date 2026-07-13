@@ -7,6 +7,42 @@
   p + p { margin-top: 16px; }
 }
 
+// "ALSO ON SET" — clapper-slate chip heading, same look the SC tags had
+.slate-heading {
+  display: inline-block;
+  font-family: @font-mono;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--ink);
+  color: var(--clapper);
+  padding: 4px 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 36px 0 16px;
+}
+
+.poster-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 150px));
+  gap: 20px;
+
+  img {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--line);
+    background: var(--paper-raise);
+  }
+
+  figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--grey);
+
+    strong { color: var(--text); }
+  }
+}
+
 .facts {
   font-family: @font-mono;
   font-size: 13px;

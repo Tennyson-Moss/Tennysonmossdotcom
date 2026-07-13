@@ -26,3 +26,44 @@
   border: 1px solid var(--line);
   background: var(--ink);
 }
+
+// One Flesh media-object row — compact, sits under the Groundwork caption
+.film-credit {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 16px;
+
+  img {
+    width: 180px;
+    flex-shrink: 0;
+    display: block;
+    border: 1px solid var(--line);
+    background: var(--paper-raise);
+  }
+
+  .film-credit-text {
+    font-size: 14px;
+    color: var(--grey);
+
+    p { margin: 0 0 6px; }
+
+    .film-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 2px solid var(--clapper);
+
+      &:hover,
+      &:focus-visible {
+        background: var(--clapper);
+        color: var(--ink);
+      }
+    }
+  }
+}
