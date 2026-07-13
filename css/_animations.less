@@ -13,21 +13,6 @@
   }
 }
 
-// Scene tag "clap": the SC xx slate snaps down like a clapperboard arm
-// once its scene header scrolls into view.
-.scene.reveal .tag {
-  transform-origin: left bottom;
-}
-
-.scene.reveal.is-in .tag {
-  animation: clap 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s backwards;
-}
-
-@keyframes clap {
-  from { transform: rotate(-12deg); }
-  to   { transform: none; }
-}
-
 // Hero highlight sweep — pure CSS, runs on load. The background is a
 // gradient (not a color) so its size can animate like a highlighter stroke.
 @media (prefers-reduced-motion: no-preference) {
