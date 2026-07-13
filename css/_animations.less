@@ -1,0 +1,48 @@
+// Scroll-in reveals + load animations.
+// .reveal is added by js/main.js only when JS runs and the visitor hasn't
+// asked for reduced motion, so everything below is progressive enhancement.
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Scene tag "clap": the SC xx slate snaps down like a clapperboard arm
+// once its scene header scrolls into view.
+.scene.reveal .tag {
+  transform-origin: left bottom;
+}
+
+.scene.reveal.is-in .tag {
+  animation: clap 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s backwards;
+}
+
+@keyframes clap {
+  from { transform: rotate(-12deg); }
+  to   { transform: none; }
+}
+
+// Hero highlight sweep — pure CSS, runs on load. The background is a
+// gradient (not a color) so its size can animate like a highlighter stroke.
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 .hl {
+    animation: hl-sweep 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.35s backwards;
+  }
+}
+
+@keyframes hl-sweep {
+  from {
+    background-size: 0% 100%;
+    color: var(--text);
+  }
+  to {
+    background-size: 100% 100%;
+    color: var(--ink);
+  }
+}

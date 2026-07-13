@@ -96,7 +96,8 @@ header {
   padding-bottom: 2px;
 }
 .nav a.navlink:hover,
-.nav a.navlink:focus-visible {
+.nav a.navlink:focus-visible,
+.nav a.navlink.active {
   border-bottom-color: var(--clapper);
 }
 .hero {
@@ -113,7 +114,7 @@ header {
 }
 .hero h1 .hl {
   display: inline-block;
-  background: var(--clapper);
+  background: linear-gradient(var(--clapper), var(--clapper)) left / 100% 100% no-repeat;
   color: var(--ink);
   padding: 0 0.08em;
 }
@@ -173,6 +174,16 @@ section {
   color: var(--grey);
   font-size: 15px;
 }
+.project-caption a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 2px solid var(--clapper);
+}
+.project-caption a:hover,
+.project-caption a:focus-visible {
+  background: var(--clapper);
+  color: var(--ink);
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -187,15 +198,20 @@ section {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: border-color 0.25s ease;
 }
 .tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .tile:hover {
-  border-color: var(--text);
+  border-color: var(--clapper);
+}
+.tile:hover img {
+  transform: scale(1.04);
 }
 .motion-stack {
   display: grid;
@@ -279,6 +295,44 @@ footer {
   color: var(--grey);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+.scene.reveal .tag {
+  transform-origin: left bottom;
+}
+.scene.reveal.is-in .tag {
+  animation: clap 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s backwards;
+}
+@keyframes clap {
+  from {
+    transform: rotate(-12deg);
+  }
+  to {
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 .hl {
+    animation: hl-sweep 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.35s backwards;
+  }
+}
+@keyframes hl-sweep {
+  from {
+    background-size: 0% 100%;
+    color: var(--text);
+  }
+  to {
+    background-size: 100% 100%;
+    color: var(--ink);
+  }
 }
 @media (max-width: 760px) {
   .grid {

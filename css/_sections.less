@@ -41,4 +41,16 @@ section {
   max-width: 640px;
   color: var(--grey);
   font-size: 15px;
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 2px solid var(--clapper);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--clapper);
+      color: var(--ink);
+    }
+  }
 }

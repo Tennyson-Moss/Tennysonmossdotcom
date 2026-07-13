@@ -14,7 +14,9 @@
       // inline-block clamps the background to the line box; Anton's font
       // metrics otherwise make an inline background bleed into adjacent lines
       display: inline-block;
-      background: var(--clapper);
+      // gradient instead of a plain color so _animations.less can sweep
+      // background-size like a highlighter stroke
+      background: linear-gradient(var(--clapper), var(--clapper)) left / 100% 100% no-repeat;
       color: var(--ink); // stay dark-on-yellow in dark mode too
       padding: 0 0.08em;
     }
