@@ -26,10 +26,15 @@
 <header>
   <nav class="nav" aria-label="Main">
     <a class="mark" href="#top">Tennyson Moss</a>
-    <ul>
-      <li><a class="navlink" href="#work">Work</a></li>
-      <li><a class="navlink" href="#motion">Motion</a></li>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul id="nav-menu">
       <li><a class="navlink" href="#interactive">Interactive</a></li>
+      <li><a class="navlink" href="#motion">Motion</a></li>
+      <li><a class="navlink" href="#work">Work</a></li>
       <li><a class="navlink" href="#about">About</a></li>
       <li><a class="navlink" href="#contact">Contact</a></li>
     </ul>
@@ -51,28 +56,26 @@
     </div>
   </div>
 
-  <!-- ============ SCENE 01: STATIC DESIGN ============ -->
-  <section id="work">
+  <!-- ============ SCENE 01: INTERACTIVE ============ -->
+  <section id="interactive">
     <div class="wrap">
       <div class="scene">
         <span class="tag">SC 01</span>
-        <h2>Graphic Design</h2>
-        <span class="note">BRAND SYSTEMS / SOCIAL / PRINT</span>
+        <h2>Interactive</h2>
+        <span class="note">RIVE / REALTIME</span>
       </div>
 
-      <div class="grid">
-        <div class="tile"><img src="assets/47v2.jpg" alt="Podcast episode graphic: software box mockup titled Unlock Your Brand Positioning" loading="lazy"></div>
-        <div class="tile"><img src="assets/ep45.jpg" alt="Podcast episode graphic: duotone Napoleon painting collage titled Are You a Start-Up, Scale Up, or Empire Leader" loading="lazy"></div>
-        <div class="tile"><img src="assets/ep50v4.jpg" alt="Podcast episode graphic from the How To Sell More series" loading="lazy"></div>
-        <div class="tile"><img src="assets/ep46v1.jpg" alt="Podcast episode graphic: framed print on textured wall titled Old School Sales Techniques That Still Work" loading="lazy"></div>
-        <div class="tile"><img src="assets/ep57v2.jpg" alt="Podcast episode graphic from the How To Sell More series" loading="lazy"></div>
-        <div class="tile"><img src="assets/ep40.jpg" alt="Podcast episode graphic: poster mockup from the How To Sell More series" loading="lazy"></div>
+      <div class="rive-frame">
+        <canvas id="city-canvas" aria-label="Interactive city skyline animation — use the buttons below to switch cities"></canvas>
       </div>
-
+      <div class="city-buttons" role="group" aria-label="Choose a city">
+        <button type="button" data-city="1" aria-pressed="false">Seattle</button>
+        <button type="button" data-city="2" aria-pressed="false">St. Louis</button>
+        <button type="button" data-city="3" aria-pressed="false">Nashville</button>
+      </div>
       <p class="project-caption">
-        <strong>Episode graphics series — How To Sell More podcast.</strong>
-        50+ graphics commissioned by SalesLoop, a B2B branding agency, designed within their established brand system.
-        <!-- PLACEHOLDER: second project caption goes here when the Costa Vida / FatCats spec print pieces exist -->
+        <strong>City lines — interactive piece.</strong>
+        Built in Rive. Pick a city and the skyline redraws in real time.
       </p>
     </div>
   </section>
@@ -106,26 +109,28 @@
     </div>
   </section>
 
-  <!-- ============ SCENE 03: INTERACTIVE ============ -->
-  <section id="interactive">
+  <!-- ============ SCENE 03: STATIC DESIGN ============ -->
+  <section id="work">
     <div class="wrap">
       <div class="scene">
         <span class="tag">SC 03</span>
-        <h2>Interactive</h2>
-        <span class="note">RIVE / REALTIME</span>
+        <h2>Graphic Design</h2>
+        <span class="note">BRAND SYSTEMS / SOCIAL / PRINT</span>
       </div>
 
-      <div class="rive-frame">
-        <canvas id="city-canvas" aria-label="Interactive city skyline animation — use the buttons below to switch cities"></canvas>
+      <div class="grid">
+        <div class="tile"><img src="assets/47v2.jpg" alt="Podcast episode graphic: software box mockup titled Unlock Your Brand Positioning" loading="lazy"></div>
+        <div class="tile"><img src="assets/ep45.jpg" alt="Podcast episode graphic: duotone Napoleon painting collage titled Are You a Start-Up, Scale Up, or Empire Leader" loading="lazy"></div>
+        <div class="tile"><img src="assets/ep50v4.jpg" alt="Podcast episode graphic from the How To Sell More series" loading="lazy"></div>
+        <div class="tile"><img src="assets/ep46v1.jpg" alt="Podcast episode graphic: framed print on textured wall titled Old School Sales Techniques That Still Work" loading="lazy"></div>
+        <div class="tile"><img src="assets/ep57v2.jpg" alt="Podcast episode graphic from the How To Sell More series" loading="lazy"></div>
+        <div class="tile"><img src="assets/ep40.jpg" alt="Podcast episode graphic: poster mockup from the How To Sell More series" loading="lazy"></div>
       </div>
-      <div class="city-buttons" role="group" aria-label="Choose a city">
-        <button type="button" data-city="1" aria-pressed="false">Seattle</button>
-        <button type="button" data-city="2" aria-pressed="false">St. Louis</button>
-        <button type="button" data-city="3" aria-pressed="false">Nashville</button>
-      </div>
+
       <p class="project-caption">
-        <strong>City lines — interactive piece.</strong>
-        Built in Rive. Pick a city and the skyline redraws in real time.
+        <strong>Episode graphics series — How To Sell More podcast.</strong>
+        50+ graphics commissioned by SalesLoop, a B2B branding agency, designed within their established brand system.
+        <!-- PLACEHOLDER: second project caption goes here when the Costa Vida / FatCats spec print pieces exist -->
       </p>
     </div>
   </section>

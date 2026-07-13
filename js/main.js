@@ -32,6 +32,22 @@
     });
   }
 
+  // ---- Mobile hamburger menu ----------------------------------------------
+  var nav = document.querySelector('.nav');
+  var toggle = document.querySelector('.nav-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // ---- Nav scroll-spy ----------------------------------------------------
   var links = {};
   document.querySelectorAll('.nav a.navlink').forEach(function (a) {

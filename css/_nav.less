@@ -6,6 +6,30 @@ header {
   z-index: 10;
 }
 
+.nav-toggle {
+  display: none; // shown on mobile via _responsive.less
+  background: none;
+  border: 0;
+  padding: 10px 8px;
+  cursor: pointer;
+
+  .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+
+    & + .bar { margin-top: 5px; }
+  }
+}
+
+.nav.open .nav-toggle {
+  .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .bar:nth-child(2) { opacity: 0; }
+  .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
 .nav {
   display: flex;
   align-items: center;
