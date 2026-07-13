@@ -165,6 +165,14 @@ section {
   padding: 72px 0;
   border-bottom: 1px solid var(--line);
 }
+.slugline {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 12px;
+}
 .scene {
   display: flex;
   align-items: baseline;
