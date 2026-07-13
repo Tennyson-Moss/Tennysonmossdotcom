@@ -281,6 +281,27 @@ section {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
+.director-note {
+  max-width: 560px;
+  margin-top: 32px;
+  padding-left: 20px;
+  border-left: 3px solid var(--clapper);
+}
+.director-note .k {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 8px;
+}
+.director-note p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.55;
+}
 .city-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
