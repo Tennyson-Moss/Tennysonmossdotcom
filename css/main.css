@@ -254,21 +254,14 @@ section {
   height: 100%;
   border: 0;
 }
-.video-hero {
-  width: 100%;
-  max-width: 720px;
-  justify-self: center;
-  display: block;
-  border: 1px solid var(--line);
-  background: var(--ink);
-}
 .film-credit {
   display: flex;
   align-items: flex-start;
   gap: 24px;
   margin-top: 16px;
 }
-.film-credit img {
+.film-credit img,
+.film-credit video {
   width: 180px;
   flex-shrink: 0;
   display: block;
@@ -517,7 +510,8 @@ footer {
   .film-credit {
     flex-direction: column;
   }
-  .film-credit img {
+  .film-credit img,
+  .film-credit video {
     width: 60%;
     max-width: 220px;
   }
