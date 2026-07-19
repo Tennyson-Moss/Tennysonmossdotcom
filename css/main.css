@@ -297,7 +297,7 @@ section {
 .rive-frame canvas {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 1;
 }
 .director-note {
   max-width: 560px;
@@ -485,6 +485,11 @@ footer {
   .scene .note {
     margin-left: 0;
     width: 100%;
+  }
+  .city-buttons button {
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    padding: 12px 4px;
   }
   .nav-toggle {
     display: block;
