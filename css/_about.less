@@ -62,4 +62,16 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--clapper);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--clapper);
+      color: var(--ink);
+    }
+  }
 }

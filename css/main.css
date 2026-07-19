@@ -407,6 +407,16 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.facts a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--clapper);
+}
+.facts a:hover,
+.facts a:focus-visible {
+  background: var(--clapper);
+  color: var(--ink);
+}
 .contact {
   text-align: left;
 }
