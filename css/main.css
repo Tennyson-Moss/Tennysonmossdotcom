@@ -527,6 +527,19 @@ footer {
   }
   .poster-row {
     grid-template-columns: 1fr;
-    max-width: 260px;
+    max-width: none;
+    gap: 18px;
+  }
+  .poster-row figure {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .poster-row img {
+    width: 96px;
+    flex-shrink: 0;
+  }
+  .poster-row figcaption {
+    margin-top: 0;
   }
 }

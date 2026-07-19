@@ -41,8 +41,24 @@
     video { width: 60%; max-width: 220px; }
   }
 
+  // stack as compact media objects (poster left, caption right) so the
+  // "also on set" credits don't each fill the screen
   .poster-row {
     grid-template-columns: 1fr;
-    max-width: 260px;
+    max-width: none;
+    gap: 18px;
+
+    figure {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    img {
+      width: 96px;
+      flex-shrink: 0;
+    }
+
+    figcaption { margin-top: 0; }
   }
 }
